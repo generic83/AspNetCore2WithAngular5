@@ -4,10 +4,25 @@
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "module": "es2015",
-    "types": []
+    "types": [], //[ "webpack-env" ],
+    "target": "es5",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipDefaultLibCheck": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "lib": [ "es6", "dom" ]
+  },
+  "atom": { "rewriteTsconfig": false },
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "bin",
+    "node_modules"
   ]
 }
