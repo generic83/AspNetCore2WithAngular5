@@ -17,7 +17,7 @@ export class QuizListComponent {
     this.title = "Latest Quizzes";
     var url = baseUrl + "api/quiz/Latest/";
 
-    http.get<Quiz[]>(url).subscribe(result => {
+    http.get<Quiz[]>(url).subscribe(result => {   // subscribe instantiates an Observable object that will execute two very different actions right after a result and/or in case of an error
       this.quizzes = result;
     }, error => console.error(error));
   }
